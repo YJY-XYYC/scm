@@ -1,0 +1,126 @@
+# ==============================================
+# 前端（Vue / React / 通用前端）
+# ==============================================
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env.local
+frontend/.env.*.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.vscode/
+frontend/.idea/
+frontend/.nuxt/
+frontend/.next/
+frontend/.cache/
+frontend/coverage/
+
+# 锁定文件二选一即可（不要同时忽略）
+# frontend/package-lock.json
+frontend/yarn.lock
+
+# ==============================================
+# 后端（SpringBoot / Maven / Gradle）
+# ==============================================
+backend/target/
+backend/build/
+backend/.idea/
+backend/*.iml
+backend/*.iws
+backend/*.ipr
+backend/.settings/
+backend/.classpath
+backend/.project
+backend/.factorypath
+backend/logs/
+backend/*.log
+backend/tmp/
+backend/temp/
+backend/query
+backend/derby.log
+backend/heapedump.hprof
+
+# ==============================================
+# 根目录通用
+# ==============================================
+node_modules/
+dist/
+build/
+.env
+.env.*
+!.env.example
+package-lock.json
+# yarn.lock
+pnpm-lock.yaml
+
+# ==============================================
+# 系统文件
+# ==============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# ==============================================
+# IDE / 编辑器
+# ==============================================
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.iml
+*.ipr
+*.iws
+
+# ==============================================
+# 临时文件
+# ==============================================
+*.swp
+*.swo
+*~
+tmp/
+temp/
+*.tmp
+*.temp
+
+# ==============================================
+# 缓存 / 构建产物
+# ==============================================
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vuepress/dist
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+.vscode-test
+
+# ==============================================
+# Yarn / PnP 相关
+# ==============================================
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ==============================================
+# 测试 / 覆盖率
+# ==============================================
+coverage/
+.nyc_output/
+
+# ==============================================
+# 日志
+# ==============================================
+*.log
+logs/ 

@@ -1,0 +1,165 @@
+// 全局样式
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#app {
+  height: 100%;
+}
+
+// 清除浮动
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// 文本溢出省略号
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 滚动条样式
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A4A3A6;
+  border-radius: 3px;
+  
+  &:hover {
+    background: #A4A3A6;
+  }
+}
+
+// element-plus 样式覆盖
+.el-card {
+  &.is-always-shadow {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  }
+}
+
+// 下拉选择器背景颜色设置 - 全局高优先级
+.el-select-dropdown,
+.el-select-dropdown-menu,
+.el-select__popper {
+  background-color: #48494c !important;
+  background: #48494c !important;
+  --el-select-dropdown-bg-color: #48494c !important;
+  --el-bg-color: #48494c !important;
+  --el-bg-color-overlay: #48494c !important;
+  border-color: white !important;
+  background-image: none !important;
+}
+
+// 分页组件总数显示文本样式
+.el-pagination__total {
+  color: white !important;
+}
+
+// 高优先级的span元素样式，确保所有span文字都是白色
+span {
+  color: white !important;
+}
+
+// 全局设置输入框wrapper背景色
+.el-input__wrapper {
+  background-color: #48494c !important;
+  --el-input-bg-color: #48494c !important;
+  --el-input-group-bg-color: #48494c !important;
+  box-shadow: none !important;
+  border-color: #48494c !important;
+}
+
+// 全局设置选择器wrapper背景色
+.el-select__wrapper,
+.el-select__wrapper.el-tooltip__trigger {
+  background-color: #48494c !important;
+  --el-select-bg-color: #48494c !important;
+  --el-bg-color: #48494c !important;
+  box-shadow: none !important;
+  border-color: #48494c !important;
+}
+
+// 针对带有data-v属性的span元素的更高优先级样式
+span[data-v-690b902b] {
+  color: white !important;
+  font-weight: normal !important;
+  text-decoration: none !important;
+}
+
+// 为CountTo组件的span元素设置样式
+.count-to-span {
+  color: white !important;
+  font-weight: normal !important;
+  text-decoration: none !important;
+}
+
+// 热销商品TOP10前三名样式 - 使用更高优先级的选择器
+.el-table .gold-medal {
+  background-color: #fff9e6 !important;
+}
+
+.el-table .gold-medal > td {
+  background-color: #fff9e6 !important;
+  color: #e6a23c !important;
+  font-weight: bold !important;
+}
+
+.el-table .silver-medal {
+  background-color: #f0f9ff !important;
+}
+
+.el-table .silver-medal > td {
+  background-color: #f0f9ff !important;
+  color: #909399 !important;
+  font-weight: bold !important;
+}
+
+.el-table .bronze-medal {
+  background-color: #fdf6ec !important;
+}
+
+.el-table .bronze-medal > td {
+  background-color: #fdf6ec !important;
+  color: #e67700 !important;
+  font-weight: bold !important;
+}
+
+// 消息框样式
+.el-message-box {
+  background-color: #454d56 !important;
+  color: white !important;
+}
+
+// 消息框文本样式
+.el-message-box__message p {
+  color: #ffffff !important;
+}
+
+// 消息框按钮样式
+.el-message-box__btns .el-button {
+  color: white !important;
+  border-color: white !important;
+}
+
+.el-message-box__btns .el-button--primary {
+  background-color: #409eff !important;
+  border-color: #409eff !important;
+}

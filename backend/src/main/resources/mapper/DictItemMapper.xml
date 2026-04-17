@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.scm.mapper.DictItemMapper">
+    
+    <!-- 根据字典ID获取字典项列表（仅启用） -->
+    <select id="selectByDictId" resultType="com.scm.entity.DictItem">
+        SELECT 
+            id,
+            dict_id AS dictId,
+            label,
+            value,
+            sort,
+            status,
+            create_time AS createTime,
+            update_time AS updateTime
+        FROM sys_dict_item
+        WHERE dict_id = #{dictId} AND status = 1
+        ORDER BY sort ASC, id ASC
+    </select>
+    
+    <!-- 根据字典ID获取所有字典项（包括禁用） -->
+    <select id="selectAllByDictId" resultType="com.scm.entity.DictItem">
+        SELECT 
+            id,
+            dict_id AS dictId,
+            label,
+            value,
+            sort,
+            status,
+            create_time AS createTime,
+            update_time AS updateTime
+        FROM sys_dict_item
+        WHERE dict_id = #{dictId}
+        ORDER BY sort ASC, id ASC
+    </select>
+    
+    <!-- 删除指定字典ID的所有字典项 -->
+    <delete id="deleteByDictId">
+        DELETE FROM sys_dict_item WHERE dict_id = #{dictId}
+    </delete>
+</mapper>

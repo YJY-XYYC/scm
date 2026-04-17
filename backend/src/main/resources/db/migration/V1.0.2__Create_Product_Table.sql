@@ -1,0 +1,14 @@
+CREATE TABLE sys_product (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL COMMENT '商品名称',
+    code VARCHAR(50) NOT NULL COMMENT '商品编码',
+    category VARCHAR(50) COMMENT '商品分类',
+    price DECIMAL(10,2) NOT NULL COMMENT '价格',
+    stock INT NOT NULL DEFAULT 0 COMMENT '库存',
+    status TINYINT NOT NULL DEFAULT 1 COMMENT '状态：0-下架，1-上架',
+    image VARCHAR(255) COMMENT '商品图片',
+    description TEXT COMMENT '商品描述',
+    create_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    update_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+    UNIQUE KEY uk_code (code)
+) COMMENT '商品表'; 

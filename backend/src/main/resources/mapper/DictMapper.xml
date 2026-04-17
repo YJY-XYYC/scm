@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.scm.mapper.DictMapper">
+    <!-- 如果有自定义查询，需要修改字段名 -->
+    <select id="selectDictList" resultType="com.scm.entity.Dict">
+        SELECT 
+            id,
+            dict_name,
+            dict_code,
+            description,
+            status,
+            create_time,
+            update_time
+        FROM sys_dict
+        <where>
+            <if test="dictCode != null and dictCode != ''">
+                AND dict_code = #{dictCode}
+            </if>
+        </where>
+    </select>
+</mapper> 

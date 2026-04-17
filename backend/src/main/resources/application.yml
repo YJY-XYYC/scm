@@ -1,0 +1,58 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /scm
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/scm?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+  sql:
+    init:
+      mode: never # 生产时候要禁用自动初始化
+      schema-locations: classpath:db/schema.sql
+      data-locations: classpath:db/data.sql
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  type-aliases-package: com.scm.entity
+  mapper-locations: classpath*:mapper/*.xml
+
+logging:
+  level:
+    root: INFO
+    com.scm: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.jdbc: DEBUG
+    com.baomidou.mybatisplus: DEBUG
+
+# 文件上传配置
+upload:
+  # 上传路径
+  path: D:/upload/
+  # 访问路径前缀
+  prefix: /upload/
+  # 允许的文件类型
+  allowed-types: image/jpeg,image/png,image/gif
+  # 最大文件大小（单位：MB）
+  max-size: 5 
+
+jwt:
+  secret: supply-chain-management-system-jwt-secret-key-2024-secure-token-with-sufficient-length-for-hs512-algorithm
+  expiration: 86400000  # 24小时

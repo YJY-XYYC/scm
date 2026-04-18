@@ -1,0 +1,19 @@
+# 前端文件识别为 JavaScript
+*.vue linguist-language=JavaScript
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
+*.ts linguist-language=JavaScript
+*.tsx linguist-language=JavaScript
+
+# 后端文件保持为 Java
+*.java linguist-language=Java
+
+# 配置文件和其他文件归类为 Other
+*.json linguist-language=Other
+*.yaml linguist-language=Other
+*.yml linguist-language=Other
+*.xml linguist-language=Other
+*.properties linguist-language=Other
+*.md linguist-language=Other
+*.txt linguist-language=Other
+*.sql linguist-language=Other

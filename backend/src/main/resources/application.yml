@@ -45,7 +45,7 @@ logging:
 # 文件上传配置
 upload:
   # 上传路径
-  path: D:/upload/
+  path: ../upload/
   # 访问路径前缀
   prefix: /upload/
   # 允许的文件类型

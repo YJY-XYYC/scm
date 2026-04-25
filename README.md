@@ -14,6 +14,7 @@
 | MyBatis-Plus | ORM 框架 | 3.5.3.1 |
 | MySQL | 数据库 | 8.x |
 | JWT | 身份认证 | - |
+| Swagger | API文档 | 2.3.0 |
 | Maven | 项目构建 | 3.x |
 
 ### 前端技术栈
@@ -225,6 +226,12 @@ supply-chain-management/
 
 ## API 文档
 
+### Swagger UI
+
+项目集成了 Swagger UI 接口文档，可通过以下地址访问：
+- **Swagger UI 页面**：http://localhost:8080/scm/swagger-ui.html
+- **API 文档 JSON**：http://localhost:8080/scm/v3/api-docs
+
 ### 认证接口
 
 | 接口 | 方法 | 说明 |
@@ -345,6 +352,11 @@ npm run dev
 - **问题反馈**：https://github.com/YJY-XYYC/scm/issues
 
 ## 更新日志
+
+### V1.0.1 (2026-04-25)
+
+- 集成 Swagger UI 接口文档
+- 优化 API 文档访问体验
 
 ### V1.0.0 (2024-01-01)
 

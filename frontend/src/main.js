@@ -22,7 +22,8 @@ window.onerror = function(message, source, lineno, colno, error) {
     'zybTrackerStatisticsAction',
     'rumt-zh.com',
     'message channel closed',
-    'A listener indicated an asynchronous response'
+    'A listener indicated an asynchronous response',
+    'ResizeObserver loop'
   ];
   
   if (message && ignorePatterns.some(pattern => message.includes(pattern))) {

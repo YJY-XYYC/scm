@@ -18,5 +18,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
         // 配置静态资源处理器，用于访问上传的文件
         registry.addResourceHandler(fileUploadConfig.getPrefix() + "**")
                 .addResourceLocations("file:" + fileUploadConfig.getPath());
+        // 兼容前端通过 /api 代理访问上传文件
+        registry.addResourceHandler("/api" + fileUploadConfig.getPrefix() + "**")
+                .addResourceLocations("file:" + fileUploadConfig.getPath());
     }
 }

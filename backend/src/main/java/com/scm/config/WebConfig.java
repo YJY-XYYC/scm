@@ -18,5 +18,8 @@ public class WebConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler(fileUploadConfig.getPrefix() + "**")
                 .addResourceLocations("file:" + fileUploadConfig.getPath());
+        // 兼容前端通过 /api 代理访问上传文件
+        registry.addResourceHandler("/api" + fileUploadConfig.getPrefix() + "**")
+                .addResourceLocations("file:" + fileUploadConfig.getPath());
     }
 }

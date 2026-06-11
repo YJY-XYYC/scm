@@ -8,27 +8,27 @@
 
 ### 后端技术栈
 
-| 技术 | 说明 | 版本 |
-|------|------|------|
-| Spring Boot | 后端框架 | 3.1.5 |
+| 技术           | 说明     | 版本      |
+| ------------ | ------ | ------- |
+| Spring Boot  | 后端框架   | 3.1.5   |
 | MyBatis-Plus | ORM 框架 | 3.5.3.1 |
-| MySQL | 数据库 | 8.x |
-| JWT | 身份认证 | - |
-| Swagger | API文档 | 2.3.0 |
-| Maven | 项目构建 | 3.x |
+| MySQL        | 数据库    | 8.x     |
+| JWT          | 身份认证   | -       |
+| Swagger      | API文档  | 2.3.0   |
+| Maven        | 项目构建   | 3.x     |
 
 ### 前端技术栈
 
-| 技术 | 说明 | 版本 |
-|------|------|------|
-| Vue 3 | 前端框架 | 3.3.11 |
-| Vite | 构建工具 | 5.0.10 |
-| Element Plus | UI 组件库 | 2.11.8 |
-| Pinia | 状态管理 | 2.3.0 |
-| Vue Router | 路由管理 | 4.5.0 |
-| Axios | HTTP 客户端 | 1.7.9 |
-| ECharts | 数据可视化 | 5.6.0 |
-| Sass | CSS 预处理器 | 1.83.0 |
+| 技术           | 说明       | 版本     |
+| ------------ | -------- | ------ |
+| Vue 3        | 前端框架     | 3.3.11 |
+| Vite         | 构建工具     | 5.0.10 |
+| Element Plus | UI 组件库   | 2.11.8 |
+| Pinia        | 状态管理     | 2.3.0  |
+| Vue Router   | 路由管理     | 4.5.0  |
+| Axios        | HTTP 客户端 | 1.7.9  |
+| ECharts      | 数据可视化    | 5.6.0  |
+| Sass         | CSS 预处理器 | 1.83.0 |
 
 ### 系统架构图
 
@@ -93,18 +93,18 @@
 
 ### 模块说明
 
-| 模块 | 功能描述 |
-|------|----------|
-| 仪表盘 | 提供关键业务指标的实时展示，包括销售趋势、库存状态、生产进度等 |
-| 用户管理 | 实现用户生命周期管理，支持角色权限的灵活配置 |
-| 物料管理 | 管理企业生产所需的各种原材料和辅助材料 |
-| 产品管理 | 管理企业生产的各类产品，支持产品分类和价格策略 |
-| 供应商管理 | 管理和评估供应商，优化采购渠道 |
-| 库存管理 | 实时监控库存状态，支持多仓库管理 |
-| 生产计划 | 制定和跟踪生产计划，确保按时交付 |
-| 销售管理 | 完整的销售流程管理，支持多种销售模式 |
-| 订单管理 | 订单全流程跟踪，从下单到交付 |
-| 系统管理 | 系统基础参数配置，保证系统稳定运行 |
+| 模块    | 功能描述                            |
+| ----- | ------------------------------- |
+| 仪表盘   | 提供关键业务指标的实时展示，包括销售趋势、库存状态、生产进度等 |
+| 用户管理  | 实现用户生命周期管理，支持角色权限的灵活配置          |
+| 物料管理  | 管理企业生产所需的各种原材料和辅助材料             |
+| 产品管理  | 管理企业生产的各类产品，支持产品分类和价格策略         |
+| 供应商管理 | 管理和评估供应商，优化采购渠道                 |
+| 库存管理  | 实时监控库存状态，支持多仓库管理                |
+| 生产计划  | 制定和跟踪生产计划，确保按时交付                |
+| 销售管理  | 完整的销售流程管理，支持多种销售模式              |
+| 订单管理  | 订单全流程跟踪，从下单到交付                  |
+| 系统管理  | 系统基础参数配置，保证系统稳定运行               |
 
 ## 项目结构
 
@@ -163,7 +163,6 @@ supply-chain-management/
    ```sql
    CREATE DATABASE scm DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
    ```
-
 2. **修改数据库配置**
    编辑 `backend/src/main/resources/application.yml`：
    ```yaml
@@ -173,7 +172,6 @@ supply-chain-management/
        username: root
        password: your_password
    ```
-
 3. **启动后端服务**
    ```bash
    cd backend
@@ -187,72 +185,71 @@ supply-chain-management/
    cd frontend
    npm install
    ```
-
 2. **启动开发服务器**
    ```bash
    npm run dev
    ```
-
 3. **访问系统**
-   打开浏览器访问：http://localhost:3000/scm/
+   打开浏览器访问：<http://localhost:3000/scm/>
 
 ### 默认账号
 
-| 角色 | 用户名 | 密码 |
-|------|--------|------|
-| 管理员 | admin | admin123 |
+| 角色  | 用户名      | 密码     |
+| --- | -------- | ------ |
+| 管理员 | admin001 | 123456 |
 
 ## 数据库设计
 
 ### 主要数据表
 
-| 表名 | 说明 |
-|------|------|
-| sys_user | 用户表 |
-| sys_role | 角色表 |
-| sys_menu | 菜单表 |
-| sys_user_role | 用户角色关联表 |
-| sys_role_menu | 角色菜单关联表 |
-| material | 物料表 |
-| product | 产品表 |
-| supplier | 供应商表 |
-| inventory | 库存表 |
-| production_plan | 生产计划表 |
-| sales | 销售表 |
-| order | 订单表 |
-| order_item | 订单明细表 |
-| dict | 字典表 |
-| dict_item | 字典项表 |
+| 表名               | 说明      |
+| ---------------- | ------- |
+| sys\_user        | 用户表     |
+| sys\_role        | 角色表     |
+| sys\_menu        | 菜单表     |
+| sys\_user\_role  | 用户角色关联表 |
+| sys\_role\_menu  | 角色菜单关联表 |
+| material         | 物料表     |
+| product          | 产品表     |
+| supplier         | 供应商表    |
+| inventory        | 库存表     |
+| production\_plan | 生产计划表   |
+| sales            | 销售表     |
+| order            | 订单表     |
+| order\_item      | 订单明细表   |
+| dict             | 字典表     |
+| dict\_item       | 字典项表    |
 
 ## API 文档
 
 ### Swagger UI
 
 项目集成了 Swagger UI 接口文档，可通过以下地址访问：
-- **Swagger UI 页面**：http://localhost:8080/scm/swagger-ui.html
-- **API 文档 JSON**：http://localhost:8080/scm/v3/api-docs
+
+- **Swagger UI 页面**：<http://localhost:8080/scm/swagger-ui.html>
+- **API 文档 JSON**：<http://localhost:8080/scm/v3/api-docs>
 
 ### 认证接口
 
-| 接口 | 方法 | 说明 |
-|------|------|------|
-| /api/auth/login | POST | 用户登录 |
-| /api/auth/register | POST | 用户注册 |
-| /api/auth/logout | POST | 用户登出 |
-| /api/auth/captcha | GET | 获取验证码 |
+| 接口                 | 方法   | 说明    |
+| ------------------ | ---- | ----- |
+| /api/auth/login    | POST | 用户登录  |
+| /api/auth/register | POST | 用户注册  |
+| /api/auth/logout   | POST | 用户登出  |
+| /api/auth/captcha  | GET  | 获取验证码 |
 
 ### 业务接口
 
-| 接口 | 方法 | 说明 |
-|------|------|------|
-| /api/user/* | - | 用户管理接口 |
-| /api/material/* | - | 物料管理接口 |
-| /api/product/* | - | 产品管理接口 |
-| /api/supplier/* | - | 供应商管理接口 |
-| /api/inventory/* | - | 库存管理接口 |
-| /api/production/* | - | 生产计划接口 |
-| /api/sales/* | - | 销售管理接口 |
-| /api/order/* | - | 订单管理接口 |
+| 接口                 | 方法 | 说明      |
+| ------------------ | -- | ------- |
+| /api/user/\*       | -  | 用户管理接口  |
+| /api/material/\*   | -  | 物料管理接口  |
+| /api/product/\*    | -  | 产品管理接口  |
+| /api/supplier/\*   | -  | 供应商管理接口 |
+| /api/inventory/\*  | -  | 库存管理接口  |
+| /api/production/\* | -  | 生产计划接口  |
+| /api/sales/\*      | -  | 销售管理接口  |
+| /api/order/\*      | -  | 订单管理接口  |
 
 ## 安全特性
 
@@ -283,7 +280,7 @@ chore: 构建/工具相关
 
 - **类名**：UpperCamelCase（PascalCase）
 - **方法名、变量名**：lowerCamelCase
-- **常量**：UPPER_SNAKE_CASE
+- **常量**：UPPER\_SNAKE\_CASE
 - **包名**：全小写
 
 ### 分支管理
@@ -316,7 +313,6 @@ npm run dev
    mvn clean package -DskipTests
    java -jar target/scm.jar
    ```
-
 2. **前端打包部署**
    ```bash
    cd frontend
@@ -348,8 +344,8 @@ npm run dev
 ## 联系方式
 
 - **项目维护者**：YJY-XYYC
-- **GitHub 仓库**：https://github.com/YJY-XYYC/scm
-- **问题反馈**：https://github.com/YJY-XYYC/scm/issues
+- **GitHub 仓库**：<https://github.com/YJY-XYYC/scm>
+- **问题反馈**：<https://github.com/YJY-XYYC/scm/issues>
 
 ## 更新日志
 
@@ -364,3 +360,4 @@ npm run dev
 - 实现用户认证与权限管理
 - 完成核心业务模块开发
 - 前后端分离架构搭建
+

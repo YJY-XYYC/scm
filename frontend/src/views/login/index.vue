@@ -161,9 +161,9 @@ const passwordVisible = ref(false)
 // 验证码相关
 const captchaUrl = ref('')
 
-// 刷新验证码
+// 刷新验证码（走Vite代理，确保与登录请求共享同一个JSESSIONID）
 const refreshCaptcha = () => {
-  captchaUrl.value = `http://localhost:8080/scm/api/captcha/generate?timestamp=${Date.now()}`
+  captchaUrl.value = `/api/captcha/generate?timestamp=${Date.now()}`
 }
 
 // 页面加载时刷新验证码
